@@ -40,7 +40,7 @@ rm "$FONT_DIR/FiraCode.zip"
 echo "Installing Alacritty..."
 cargo install alacritty
 
-ALACRITTY_CONFIG_URL="" 
+ALACRITTY_CONFIG_URL="https://raw.githubusercontent.com/CommonDrum/MyPersonalToolset/main/alacritty.yml" 
 ALACRITTY_CONFIG_DIR="$HOME/.config/alacritty"
 mkdir -p "$ALACRITTY_CONFIG_DIR"
 curl -L $ALACRITTY_CONFIG_URL -o "$ALACRITTY_CONFIG_DIR/alacritty.yml"
