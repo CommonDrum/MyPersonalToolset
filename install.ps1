@@ -1,4 +1,5 @@
 winget install Git.Git
+winget install cmake
 
 # Install PowerShell 7
 $PowerShellReleasesUrl = "https://api.github.com/repos/PowerShell/PowerShell/releases/latest"
@@ -26,7 +27,7 @@ if (!(Get-Command cargo -ErrorAction SilentlyContinue)) {
 }
 
 Write-Host "Installing zoxide..."
-cargo install zoxide
+winget install ajeetdsouza.zoxide
 
 Write-Host "Installing starship..."
 cargo install starship
