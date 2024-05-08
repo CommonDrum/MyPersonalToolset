@@ -29,17 +29,24 @@ if (!(Get-Command cargo -ErrorAction SilentlyContinue)) {
 Write-Host "Installing zoxide..."
 winget install ajeetdsouza.zoxide
 
+
+
 Write-Host "Installing starship..."
 cargo install starship
 
-$SHELL_NAME = "pwsh"
 
-if ($SHELL_NAME -eq "pwsh") {
-    Write-Host 'Adding starship init to $PROFILE...'
-    Add-Content -Path $PROFILE -Value 'Invoke-Expression (&starship init powershell)'
-} else {
-    Write-Host "Unsupported shell. Manual configuration required."
+$commandToAdd = "`nInvoke-Expression (& { (zoxide init powershell | Out-String) })"
+
+
+$profilePath = PowerShell.exe -NoProfile -Command "echo $profile"
+
+if (-Not (Test-Path $profilePath)) {
+    New-Item -Path $profilePath -ItemType File
 }
+
+Add-Content -Path $profilePath -Value $commandToAdd
+Add-Content -Path $PROFILE -Value 'Invoke-Expression (&starship init powershell)'
+
 
 Write-Host "Installing FiraCode Nerd Font..."
 $FONT_URL = "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip"
