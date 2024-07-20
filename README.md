@@ -6,3 +6,10 @@ powershell -ExecutionPolicy Bypass -File install.ps1
 
 1..
  Bajo Jajo
+
+ # Karol to CH + (y+i)/2 + J
+ ## COnttrwnt 
+
+ _bajojajo_
+
+ **Bajo jaJO**
