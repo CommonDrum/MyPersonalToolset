@@ -1,0 +1,29 @@
+// this is for launching nvim with a terminal pane below it.
+#!/bin/bash
+
+if [ -n "$ZSH_VERSION" ]; then
+  source ~/.zshrc
+elif [ -n "$BASH_VERSION" ]; then
+  source ~/.bashrc
+fi
+
+if [ -z "$1" ]; then
+  echo "Usage: ide <directory_name>"
+  exit 1
+fi
+
+target_directory=$(zoxide query "$1") || {
+  echo "Directory not found: $1"
+  exit 1
+}
+
+if tmux has-session -t ide_session 2>/dev/null; then
+  echo "Attaching to existing session 'ide_session'"
+  tmux attach -t ide_session
+else
+  tmux new-session -d -s ide_session -c "$target_directory"
+  tmux split-window -v -c "$target_directory"
+  tmux resize-pane -D 10
+  tmux send-keys -t 0 'nvim' C-m
+  tmux attach -t ide_session
+fi
