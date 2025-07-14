@@ -1,0 +1,57 @@
+{
+    // --- Editor Settings ---
+    "editor.fontFamily": "JetBrainsMono Nerd Font Mono", // Use a monospaced font for coding
+    "editor.fontSize": 17,
+    "editor.minimap.enabled": false, // Hide the minimap
+    "editor.glyphMargin": false, // Hide the glyph margin (breakpoints, errors)
+    "editor.renderLineHighlight": "none", // Disable line highlighting
+    "editor.scrollbar.vertical": "hidden", // Hide vertical scrollbar
+    "editor.scrollbar.horizontal": "hidden", // Hide horizontal scrollbar
+    "editor.overviewRulerBorder": false, // Hide overview ruler border
+    "editor.hideCursorInOverviewRuler": true, // Hide cursor in overview ruler
+    "breadcrumbs.enabled": false,
+    //zoom settings
+    "window.zoomLevel": 2.1, // Set zoom level to default (0)
+    // --- Workbench Appearance ---
+    "workbench.statusBar.visible": false, // Hide the activity bar (can be toggled with a command)
+    "workbench.sideBar.location": "right", // Move sidebar to the right (less intrusive) - can be toggled with Ctrl+B / Cmd+B
+    // --- Window ---
+    "window.menuBarVisibility": "compact", // Or "hidden" or "toggle" for even less distraction
+    "window.titleBarStyle": "custom",
+    // --- APC Customize UI++ Settings ---
+    "apc.electron": {
+        "titleBarStyle": "hiddenInset", // Example: For a cleaner title bar on macOS
+        "frame": false,
+    },
+    "apc.stylesheet": {
+        ".monaco-workbench .part.editor > .content .editor-group-container > .title": "display: none !important;", // Hide editor tabs
+        ".monaco-workbench .part.panel > .title": "display: none !important;", // Hide panel title bar (Terminal, Output, etc.)
+        ".monaco-workbench .composite.title": "display: none !important;", // Hide sidebar title (Explorer, Search, etc.) if not already covered
+        ".quick-input-widget": "font-size: 1.2em !important; padding: 5px !important;", // Slightly larger command palette text for readability
+        ".actions-container": "display: none !important;" // Attempts to hide action buttons on items (e.g., in explorer) - might be too aggressive
+    },
+    // --- Files ---
+    "files.autoSave": "onFocusChange", // Auto-save when focus changes, reducing mental overhead
+    "explorer.openEditors.visible": 1, // Hide the "Open Editors" section in the explorer
+    // --- Terminal ---
+    "terminal.integrated.tabs.hideCondition": "singleTerminal", // Hide terminal tabs if you only use one or manage with commands
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono", // You might want to set it for the terminal too
+    "terminal.integrated.fontSize": 18, // Adjust terminal font size for readability
+    // --- Other Minimalist Tweaks ---
+    "workbench.editor.showTabs": "single", // Only show a tab if multiple editors are open, otherwise clean. Consider "none" if APC handles it.
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.iconTheme": "vs-seti", // Disable file icons for extreme minimalism (or choose a very minimal one)
+    "editor.fontLigatures": false, // Disable font ligatures if they are distracting
+    "editor.wordWrap": "on", // Avoid horizontal scrolling in code
+    "editor.cursorBlinking": "solid", // Non-blinking cursor can be less distracting
+    "editor.lightbulb.enabled": "off",
+    "workbench.activityBar.location": "hidden",
+    "glassit.alpha": 240, // Hide the suggestions lightbulb icon
+    "glassit.step": 5,
+    "workbench.productIconTheme": "fluent-icons",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "workbench.colorTheme": "Default Dark+",
+    "C_Cpp.default.compilerPath": "/usr/bin/gcc",
+}
