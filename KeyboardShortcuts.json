@@ -1,0 +1,43 @@
+[
+    {
+        "key": "ctrl+shift+i",
+        "command": "workbench.action.toggleSidebarVisibility",
+    },
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpen",
+    },
+    {
+        "key": "ctrl+o",
+        "command": "workbench.action.files.openFolder"
+    },
+    {
+        "key": "ctrl+shift+q",
+        "command": "workbench.view.extension.codium-sidebar-view-container",
+        "when": "viewContainer.workbench.view.extension.codium-sidebar-view-container.enabled"
+    },
+    {
+        "key": "f9",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "f10",
+        "command": "workbench.action.togglePanel"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "-workbench.action.togglePanel"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "workbench.action.toggleAuxiliaryBar"
+    },
+    {
+        "key": "ctrl+alt+b",
+        "command": "-workbench.action.toggleAuxiliaryBar"
+    },
+]
